@@ -1,8 +1,8 @@
 import os
 
 
-def solve_day_one():
-	file = os.path.join("Assets", "aoc_day_one.txt")
+def solve_day_1():
+	file = os.path.join("Assets", "aoc_day_1.txt")
 
 	with open(file, "r") as file:
 		directions = file.read()

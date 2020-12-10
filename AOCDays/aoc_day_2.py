@@ -1,8 +1,8 @@
 import os
 
 
-def solve_day_two():
-    file = os.path.join("Assets", "aoc_day_two.txt")
+def solve_day_2():
+    file = os.path.join("Assets", "aoc_day_2.txt")
 
     with open(file, "r") as file:
         data = file.readlines()
