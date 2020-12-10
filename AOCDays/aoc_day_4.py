@@ -18,18 +18,16 @@ def solve_day_4():
 
 
 def solve_case_one(hash_input):
-	for i in range(10000000):
-		advent_coin = hashlib.md5(f"{hash_input}{str(i)}".encode("utf-8")).hexdigest()
-		if advent_coin[0:5] == "00000":
-			print(advent_coin)
-			print(f"{hash_input}{i}")
-			break
+	i = 0
+	while not hashlib.md5(f"{hash_input}{str(i)}".encode("utf-8")).hexdigest().startswith("00000"):
+		i += 1
+
+	print(f"{str(i)} makes hash: {hashlib.md5(f'{hash_input}{str(i)}'.encode('utf-8')).hexdigest()}")
 
 
 def solve_case_two(hash_input):
-	for i in range(10000000):
-		advent_coin = hashlib.md5(f"{hash_input}{str(i)}".encode("utf-8")).hexdigest()
-		if advent_coin[0:6] == "000000":
-			print(advent_coin)
-			print(f"{hash_input}{i}")
-			break
+	i = 0
+	while not hashlib.md5(f"{hash_input}{str(i)}".encode("utf-8")).hexdigest().startswith("000000"):
+		i += 1
+
+	print(f"{str(i)} makes hash: {hashlib.md5(f'{hash_input}{str(i)}'.encode('utf-8')).hexdigest()}")
