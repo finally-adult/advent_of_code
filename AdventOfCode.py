@@ -1,9 +1,7 @@
-import inflect
 
 
 if __name__ == "__main__":
     while True:
-        p = inflect.engine()
         print("Advent of Code!")
         print("---------------")
         day_input = (input("Which day? 'q' to quit\n"))
@@ -23,3 +21,4 @@ if __name__ == "__main__":
                     print("Advent of Code only goes up to Christmas!\n")
             except ValueError:
                 print("Please input a valid number or 'q'\n")
+
